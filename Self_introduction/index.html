@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        自我介紹--陳爲鎮
+    </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>          
+            <div class="logo">
+                <P>龍華科技大學</P>   
+            </div>
+            
+            <div class ="menu">
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="About.html">關於我</a></li>
+                    <li><a href="country/country.html">我喜歡的臺灣旅游景點</a></li>
+                    <li><a href="market_01/market_01.html">臺灣夜市小吃</a></li>
+                    <li><a href="game/game_intro.html">我喜歡的遊戲</a></li>
+                </ul>
+            </div>
+        </header>   
+        <div class ="home">
+            <div class="container">
+                <div class="person">
+                    <span class="person-overlay"></span>
+                    <img src="image/person.png" alt=""width="500" height="500">
+                </div>
+                <div class="home-text">
+                    <h6 class="student">Student</h6>
+                    <h1 class="name">Wee Sern</h1>
+                    <p class="small-intro">Hello guyz, my name is Tan W.Sern and I'm student in Multimedia and Game Science at Lunghwa University.
+                    </p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="header">
+            <div class="footer">
+                <a href="word/Index.html" class="learnMore">設計心得</a>
+            </div>    
+        </div>
+    </footer>
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    
+    $(document).ready(function(){
+        $(".name, .student , .small-intro").lettering();
+        
+        // Image over Effect
+        anime({
+            targets:'.home .person-overlay',
+            translateX:1100,
+            delay:1000,
+            duration:1500,
+            easing:'easeInSine'
+        })
+         anime({
+            targets:'.home .person img',
+            opacity: 1,
+            delay:1500,
+            duration:1500,
+            easing:'easeInSine'
+        })
+        anime({
+            targets:'.student span',
+            opacity: 1,
+            duration:1500,
+            easing:'easeInSine',
+            delay:anime.stagger(100,{start:2000})
+        })
+        anime({
+            targets:'.name span',
+            opacity: 1,
+            duration:3000,
+            easing:'easeInSine',
+            delay:anime.stagger(100,{start:3500})
+        })
+        anime({
+            targets:'.name .char2, .name .char5, .name .char7',
+            keyframes:[{translateY:100,duration:1500}],
+            easing:'easeInOutExpo',
+            delay:5000,
+        })
+        anime({
+            targets:'.name .char3, .name .char6',
+            keyframes:[{translateY:-100,duration:1500}],
+            easing:'easeInOutExpo',
+            delay:5000,
+        })
+        // Logo
+        anime({
+            targets:'.logo',
+            opacity: 1,
+            duration:3000,
+            delay:3500
+        })
+        // Menu
+        anime({
+            targets:'.menu li',
+            opacity: 1,
+            duration:3000,
+            delay:anime.stagger(150,{start:4500})
+        })
+        // Intro
+        anime({
+            targets:'.small-intro span',
+            opacity: 1,
+            duration:1000,
+            easing:'easeInSine',
+            delay:anime.stagger(50,{start:5000})
+        })
+        
+    });
+    
+</script>
+    
+    
+    
+</body>
+    
+</html>

@@ -1,0 +1,628 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active{
+    background: rgb(219,219,219, 0.7);
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background: #3d3d3d;
+}
+
+.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.filter{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(45, 52, 54, 1);    
+}
+
+.container .content{
+    position: absolute;
+    height: 80%;
+    width: 75%;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.8);
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(Image/BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.3);
+}
+
+.photo{
+    position: absolute;
+    max-width: 20%;
+    align-self: center;
+    right: 22%;
+}
+
+.photo img{
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    pointer-events: none;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2);
+    
+}
+
+.name{
+    position: absolute;
+    max-width: 60%;
+    align-self: center;
+    top: 35%;
+    left: 19%;
+}
+
+.name .text{
+    margin-right: 20px;
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 22px;
+}
+
+.name .cube{
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    margin-top: 110px;
+    margin-left: 30px;
+    background: rgba(255, 255, 255, 1);
+
+}
+
+.container .contentText{
+    color: #fff;
+    width: 60%;
+    padding: 1px 30px;
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+}
+
+.name .button{
+    position: absolute;
+    height: 50px;
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50%;
+    border: 1.5px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    z-index: 1;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+    background-image: url(Image/photo-video-solid.svg);
+    background-size: 45%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.name .button:hover{
+    cursor: pointer;
+    opacity: 1;
+    filter: brightness(1.2);
+    filter: drop-shadow(1px 1px 10px rgba(255, 255, 255, 0.5));
+}
+
+.name .button:active{
+    transition: 0.2s ease;
+    transform: translate(-50%, 1px);
+}
+
+.title{
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+    font-size: 250%;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container .panel{
+    position: absolute;
+    height: 80%;
+    width: 75%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.35);
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(45, 52, 54, 0.3);
+    display: flex;
+}
+
+.panel01{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelShow01{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide01{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel02{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow02{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide02{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel03{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow03{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide03{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel04{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow04{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide04{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.numNav{
+    position: absolute;
+    height: 20px;
+    width: auto;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    cursor: default;
+}
+
+.numNav a{
+    outline: none;
+    text-decoration: none;
+}
+
+.number{
+    display: inline-block;
+    margin: 0 15px;
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.number:hover{
+    transition: 0.2s linear;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+video{
+    position: absolute;
+    max-width: 640px;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%, 4%);
+    background: #3d3d3d;
+    border: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.album{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -46%);
+    text-align: center;
+}
+
+.album a{
+    outline: none;
+    text-decoration: none;
+}
+
+.gallery{
+    height: 30%;
+    width: 20%;
+    margin: 5px;
+    display: inline-block;
+}
+
+#g1{
+    background-color: #fff;
+    background-image: url(Image/wushu_01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g2{
+    background-color: #fff;
+    background-image: url(Image/wushu_02.jpg);
+    background-size: cover;
+    background-position: 20% 40%;
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+#g3{
+    background-color: #fff;
+    background-image: url(Image/wushu_03.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g4{
+    background-color: #fff;
+    background-image: url(Image/wushu_04.jpg);
+    background-size: cover;
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+}
+
+#g5{
+    background-color: #fff;
+    background-image: url(Image/wushu_05.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g6{
+    background-color: #fff;
+    background-image: url(Image/wushu_06.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g7{
+    background-color: #fff;
+    background-image: url(Image/wushu_07.jpg);
+    background-size: cover;
+    background-position: 54% 20%;
+    background-size: 250%;
+    background-repeat: no-repeat;
+}
+
+#g8{
+    background-color: #fff;
+    background-image: url(Image/wushu_08.jpg);
+    background-size: cover;
+    background-position: 54% 20%;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+#g9{
+    background-color: #fff;
+    background-image: url(Image/wushu_09.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g10{
+    background-color: #fff;
+    background-image: url(Image/wushu_10.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g11{
+    background-color: #fff;
+    background-image: url(Image/wushu_11.jpg);
+    background-size: cover;
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+}
+
+#g12{
+    background-color: #fff;
+    background-image: url(Image/wushu_12.jpg);
+    background-size: cover;
+    background-position: 10% 20%;
+    background-repeat: no-repeat;
+}
+
+.game{
+    position: relative;
+    height: 49%;
+    width: 30%;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+    background: #3d3d3d;
+}
+
+#game01{
+    background-image: url(Image/wushu_family_01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#game02{
+    background-image: url(Image/wushu_family_02.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#game03{
+    background-image: url(Image/wushu_family_03.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 20%;
+    background-repeat: no-repeat;
+}
+
+#game04{
+    background-image: url(Image/wushu_family_04.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#game05{
+    background-image: url(Image/wushu_family_05.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#game06{
+    background-image: url(Image/wushu_family_06.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game .gameName{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Comic Sans MS;
+    font-size: 150%;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 1.0);
+    filter: brightness(5);
+    background-color: rgba(0,0,0,0.5);
+    margin: 15px;
+    align-self: center;
+}
+
+.video{
+    position: relative;
+    height: 30%;
+    width: 90%;
+    display: inline-block;
+    padding: 5%;
+}
+
+#video01{
+    left: -40%;
+}
+
+#video02{
+    left: 0%;
+ 
+}
+
+#video03{
+    left: 40%;
+    top: -96%;
+}
+
+.video .videoName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-shadow: 0 0 0.2em #0007;
+    color: rgba(255, 255, 255, 1.0);
+    filter: brightness(2);
+}
+
+.team{
+    position: relative;
+    height: 40%;
+    width: 20%;
+    margin: 5px 5px;
+    display: inline-block;
+}
+
+#t1{
+    background: url(image/wushu_myfriend_01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t2{
+    background: url(Image/wushu_myfriend_02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t3{
+    background: url(Image/wushu_myfriend_03.jpg);
+    background-size: cover;
+    background-position: 25% 60%;
+    background-repeat: no-repeat;
+}
+
+#t4{
+    background: url(Image/wushu_myfriend_04.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t5{
+    background: url(Image/wushu_myfriend_05.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t6{
+    background: url(Image/wushu_myfriend_06.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t7{
+    background: url(Image/wushu_myfriend_07.jpg);
+    background-size: cover;
+    background-position: center 60;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+#t8{
+    background: url(Image/wushu_myfriend_08.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Comic Sans MS, sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: #0007;
+}
+
+.homeBtn{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(Image/menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+}
+
+.footer .learnMore{
+            position: fixed;
+            height: 50px;
+            width: 130px;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            background: none;
+            outline: none;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "GenjyuuExtraLight";
+            font-size: 100%;
+            color: #fff;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .footer .learnMore:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
