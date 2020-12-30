@@ -507,8 +507,8 @@ video{
 
 .team{
     position: relative;
-    height: 40%;
-    width: 20%;
+    height: 38%;
+    width: 28%;
     margin: 5px 5px;
     display: inline-block;
 }
@@ -516,49 +516,49 @@ video{
 #t1{
     background: url(image/wushu_myfriend_01.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 25% 60%;
     background-repeat: no-repeat;
 }
 
 #t2{
     background: url(Image/wushu_myfriend_02.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 25% 10%;
     background-repeat: no-repeat;
 }
 
 #t3{
     background: url(Image/wushu_myfriend_03.jpg);
     background-size: cover;
-    background-position: 25% 60%;
+    background-position: 25% 0%;
     background-repeat: no-repeat;
 }
 
 #t4{
     background: url(Image/wushu_myfriend_04.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 25% 0%;
     background-repeat: no-repeat;
 }
 
 #t5{
     background: url(Image/wushu_myfriend_05.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 25% 0%;
     background-repeat: no-repeat;
 }
 
 #t6{
     background: url(Image/wushu_myfriend_06.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 25% 20%;
     background-repeat: no-repeat;
 }
 
 #t7{
     background: url(Image/wushu_myfriend_07.jpg);
     background-size: cover;
-    background-position: center 60;
+    background-position: 0% 20%;
     background-size: 120%;
     background-repeat: no-repeat;
 }
