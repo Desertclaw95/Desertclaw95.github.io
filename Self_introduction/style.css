@@ -57,7 +57,7 @@ header .menu ul li a:hover{
     overflow: hidden ;
 }
 .home .person img{
-    filter: brightness(1.7) ;
+    filter: brightness(1.8) ;
 }
 .home .person-overlay{
     content:'';
